@@ -1,12 +1,12 @@
-	
+const readline=require("readline-sync")	
 function speedDetector() {
-    //prompt the user
-    let speed = prompt("Enter your speed in km/h");
+    //get user input for speed
+    let speed =readline.question("Enter your speed in km/h");
   
     speed = Number(speed);
   
     if (isNaN(speed)) {
-      console.log("please input a number");
+      console.log("please input a valid number");
       return;
     }
   
@@ -22,16 +22,16 @@ function speedDetector() {
     const KmPerPoint = 5;
   
     if (speed <= speedLimit) {
-      alert("OK");
+      console.log("OK");
     } else {
       const points = Math.floor((speed - speedLimit) / KmPerPoint);
   
   //Check if License should be suspended
   if (points > 12) {
-    alert("License suspended");
+    console.log("License suspended");
   } else {
-    alert(`Points: ${points}`);
-  }
+    console.log(`Points: ${points}`);
+     }
     }
   }
   
