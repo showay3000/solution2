@@ -23,7 +23,7 @@ function speedDetector() {
   
     if (speed <= speedLimit) {
       console.log("OK");
-    } else {
+    } else { 
       const points = Math.floor((speed - speedLimit) / KmPerPoint);
   
   //Check if License should be suspended
